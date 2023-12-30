@@ -24,7 +24,7 @@ function App() {
   }, []);
   return (
     <div style={{display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
-      {cells.map((_, index) => <Box key={index} index={index}/>)}
+      {cells.map((_, index) => <Box key={index}/>)}
     </div>
   );
 }

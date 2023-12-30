@@ -7,18 +7,15 @@ const myStyle = {
     backgroundColor: "black",
     skew: "45deg",
 }
-type BoxProps = {
-    index: number;
-}
-const Box = ({index}: BoxProps) => {
+const Box = () => {
     const [backgroundColor, setBackgroundColor] = useState("black");
-    const changeColor = (index) => {
+    const changeColor = () => {
         const hexColor = Math.floor(Math.random()*16777215).toString(16);
         const color = "#" + hexColor;
         setBackgroundColor(color);
     }
-    return <div onMouseEnter={() => changeColor(index)} 
-    onMouseLeave={() => changeColor(index)} 
+    return <div onMouseEnter={() => changeColor()} 
+    onMouseLeave={() => changeColor()} 
     style={{...myStyle, backgroundColor}}></div>
 }
 
